@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "React first extension",
+  "description": "React first extension",
+  "version": "1.0",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Open tracker"
+  },
+  "permissions": ["storage", "tabs", "history"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*/*"],
+      "css": [],
+      "js": ["contentScript.js"]
+    }
+  ]
+}
